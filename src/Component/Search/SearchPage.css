@@ -1,0 +1,61 @@
+
+
+
+.content-wrapper {
+    display: block;
+    margin: auto;
+    max-height: 1700px;
+    max-width: 1700px;
+}
+
+/* BODY */
+body {
+    background-color: white;
+}
+
+/* PAGE TITLE */
+h1 {
+    font-family: 'Grandstander', cursive;
+    text-align: center;
+    font-size: 70px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+/* SEARCH BAR*/
+#pokemon-search-form {
+    text-align: center;
+}
+
+#pokemon-search-input{
+    width: 200px;
+    height: 20px;
+}
+
+#button-search{
+    height: 25px;
+    margin-left: 10px;
+}
+
+/*TYPE FILTER*/
+#pokemon-type-filter {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+.form-spacers {
+    height: 10px;
+}
+
+.type-filter {
+    margin: 10px;
+    padding: 4px;
+    /* font-size: large; */
+}
