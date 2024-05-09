@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react";
+import "./Detail.css"
 
 
 
@@ -43,13 +44,17 @@ function DetailPage(){
   let moves = detailsData?.moves.map((element) => element.move.name);
 
     return (
-        <div>
-            <div >
+        <div className="main">
+            <div className="left" >
                 <img src = {detailsData?.image}/>
-                <p>name</p>
+                <h2>{detailsData?.name}</h2>
             </div>
-            <div>
-                <h1>overgrow && chlorophyll</h1>
+            <div className="right">
+                <div>Height {detailsData?.height}</div>
+                <div>Weight {detailsData?.weight}</div>
+                <div>Abilities {ability?.map((element , index) => <li key={index}>{element}</li>)}</div>
+                <div>Moves {moves?.map((element , index) => <li key={index}>{element}</li>)}</div>
+ 
 
             </div>
         </div>

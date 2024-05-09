@@ -1,0 +1,19 @@
+
+.main{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+}
+
+.right{
+    
+}
+
+.left{
+
+}
+
+.left h2{
+    text-align: center;
+}
