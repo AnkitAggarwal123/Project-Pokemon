@@ -15,7 +15,10 @@ const LoadingPage = (props) => {
   // console.log(value);
 
   let abiliteValue = props.abiliteData;
-  console.log(abiliteValue);
+
+
+  let groupData = props.groupData
+  console.log(groupData)
 
   useEffect(()=>{
     if(abiliteValue == ""){
@@ -26,15 +29,14 @@ const LoadingPage = (props) => {
         return e.ability.name == abiliteValue
       });
 
-
-      const data2 = item.abilities.some((e) => {
-        return e.ability.name == abiliteValue
-      });
+      // const data2 = item.version_group_details.some((e) => {
+      //   return e.version_group.name == groupData
+      // });
       return data;
     })
     setFilter(filterAbilities)
   }
-  },[abiliteValue])
+  },[abiliteValue, groupData])
 
   let groupValue = props.groupData
   console.log(groupValue)
@@ -89,7 +91,7 @@ const LoadingPage = (props) => {
        allData()
   }, []);
 
-  
+
 
     return (
       <div className="main">

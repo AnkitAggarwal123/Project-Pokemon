@@ -27,10 +27,10 @@ function SearchPage(props){
       };
       console.log(abiliteChangeValue)
 
-    function groupChange(event){
-        const selectedValue = event.target.value;
-        setGroupChangeValue(selectedValue);
-    };
+    // function groupChange(event){
+    //     const selectedValue = event.target.value;
+    //     setGroupChangeValue(selectedValue);
+    // };
 
     async function abilites(){
         const abilitesData = await axios.get("https://pokeapi.co/api/v2/ability?limit=367")
@@ -39,27 +39,24 @@ function SearchPage(props){
         abilitesValue.sort()
     }
 
-    async function gender(){
-        const genderData = await axios.get("https://pokeapi.co/api/v2/gender")
-        setGenderValue(genderData.data.results)
+    // async function gender(){
+    //     const genderData = await axios.get("https://pokeapi.co/api/v2/gender")
+    //     setGenderValue(genderData.data.results)
 
-    }
+    // }
 
-    async function group(){
-        const groupData = await axios.get("https://pokeapi.co/api/v2/egg-group")
-        setGroupValue(groupData.data.results)
-    }
+    // async function group(){
+    //     const groupData = await axios.get("https://pokeapi.co/api/v2/egg-group")
+    //     setGroupValue(groupData.data.results)
+    // }
 
-    async function habitat(){
-        const habitatData = await axios.get("https://pokeapi.co/api/v2/pokemon-habitat")
-        setHabitatValue(habitatData.data.results)
-    }
+    // async function habitat(){
+    //     const habitatData = await axios.get("https://pokeapi.co/api/v2/pokemon-habitat")
+    //     setHabitatValue(habitatData.data.results)
+    // }
 
     useEffect(()=>{
         abilites()
-        gender()
-        group()
-        habitat()
     },[])
 
 
@@ -84,7 +81,7 @@ function SearchPage(props){
                     ))
                 }
                 </select>
-                <select class="type-filter">
+                {/* <select class="type-filter">
                     <option>gender</option>
                     {
                         genderValue.map((gen, i)=>(
@@ -108,12 +105,12 @@ function SearchPage(props){
 
                        ))
                    }
-                </select>                              
+                </select>                               */}
             </form>
 
         </main>
     </div>
-    <LoadingPage data = {searchValue} abiliteData = {abiliteChangeValue} groupData = {groupChangeValue}/>
+    <LoadingPage data = {searchValue} abiliteData = {abiliteChangeValue}/>
         </div>
     )
 }

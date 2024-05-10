@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
 
 .main{
     display: flex;
@@ -7,11 +8,12 @@
 }
 
 .right{
+    font-family: "Poetsen One", sans-serif;
     
 }
 
 .left{
-
+    font-family: "Poetsen One", sans-serif;
 }
 
 .left h2{
